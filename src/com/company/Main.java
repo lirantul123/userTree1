@@ -1,5 +1,4 @@
 package com.company;
-
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -59,10 +58,15 @@ public class Main{
 
         }
     }
-    public static String strWithSpace(String str){
-        str = "$ #";
-        str= str.replaceAll(" ", "  ");
-        return str;
+    public static String strWithSpace(String str){// not finished at all
+        str = "# $";
+        StringBuilder sb = new StringBuilder(str);
+        for (int i = 0; i < sb.length()-1; i++) {
+            if (sb.charAt(i) == ' ') {
+                sb.setCharAt(i + 1, ' ');
+            }
+        }
+        return sb.toString();
 
     }
 
