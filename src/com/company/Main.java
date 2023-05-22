@@ -44,31 +44,44 @@ public class Main{
         forShownTree(xA, yA, yeter);
     }
     public static void forShownTree(int x, int y, int yeter){
-        String str="$#";
-        for (int i = 0; i < y; i++){
-            if (i == y)
-                break;
-            System.out.println(str);
-            str = strWithSpace(str);
 
-            if (i+1 == y){
-                for (int j = 0; j < x; j++)
-                    System.out.print("#");
+        for (int i = 1; i <= y; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i || i == y)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+
             }
-
+            System.out.println();
         }
-    }
-    public static String strWithSpace(String str){// not finished at all
-        str = "# $";
-        StringBuilder sb = new StringBuilder(str);
-        for (int i = 0; i < sb.length()-1; i++) {
-            if (sb.charAt(i) == ' ') {
-                sb.setCharAt(i + 1, ' ');
-            }
-        }
-        return sb.toString();
 
+//        String str="#$";
+//        for (int i = 0; i < y; i++){
+//            if (i == y)
+//                break;
+//            System.out.println(str);
+//            str = strWithSpace(str);
+//
+//            if (i+1 == y){
+//                for (int j = 0; j < x; j++)
+//                    System.out.print("#");
+//            }
+//
+//        }
     }
+//    public static String strWithSpace(String str) {// not finished at all
+//        str = "# $";
+//        StringBuilder sb = new StringBuilder(str);
+//        for (int i = 0; i < sb.length() - 1; i++) {
+//            if (sb.charAt(i) == ' ') {
+//                sb.setCharAt(i + 1, ' ');
+//
+//            }
+//        }
+//        return sb.toString();
+//    }
+
 
     public static void gettingInfo(){
 
